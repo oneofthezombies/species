@@ -1,0 +1,6 @@
+{
+  "workspaces": [
+    "crates/species/pkg",
+    "packages/species"
+  ]
+}

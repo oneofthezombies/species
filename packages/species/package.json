@@ -3,5 +3,13 @@
   "version": "0.1.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "species": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "4.19.1"
+  },
+  "type": "module"
 }
