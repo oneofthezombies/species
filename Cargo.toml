@@ -3,3 +3,6 @@ resolver = "2"
 members = [
     "crates/species",
 ]
+
+[profile.dev]
+panic = "abort"
