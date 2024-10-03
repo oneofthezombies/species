@@ -7,4 +7,4 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-js-sys = "0.3.70"
+web-sys = { version = "0.3.70", features = ["console"] }

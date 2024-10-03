@@ -1,23 +1,13 @@
 #![no_std]
 
-use core::panic::PanicInfo;
+use js_sys::wasm_bindgen;
+use js_sys::JSON;
+use wasm_bindgen::prelude::*;
+use web_sys::console;
+use web_sys::js_sys;
 
-#[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
-    loop {}
-}
-
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[wasm_bindgen]
+pub fn parse_js_sys(json_string: &str) {
+    let result = JSON::parse(json_string);
+    console::log(result)
 }
